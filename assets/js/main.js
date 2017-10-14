@@ -294,14 +294,14 @@ jQuery(document).ready(function($) {
     function initialize() {
         map = new GMaps({
             div: '#map',
-            lat: -37.817917,
-            lng: 144.965065,
+            lat: 13.791117,
+            lng: 100.542185,
             zoom: 16
 
         });
         map.addMarker({
-            lat: -37.81792,
-            lng: 144.96506,
+            lat: -100.542185,
+            lng: 100.542185,
             title: 'Marker with InfoWindow',
             icon: 'images/pins-map/map-marker.png',
             infoWindow: {
@@ -390,27 +390,27 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
 
     $(".resp-tabs-container h2.resp-accordion").each(function(){
-			 
+
 			if($(this).hasClass('resp-tab-active')){
 				$(this).append("<i class='glyphicon glyphicon-chevron-up arrow-tabs'></i>");
 			}else {
 				$(this).append("<i class='glyphicon glyphicon-chevron-down arrow-tabs'></i>");
 			}
 	  });
-	  
+
 	   $(".resp-tabs-container h2.resp-accordion").click(function(){
 			if($(this).hasClass('resp-tab-active')){
 				$(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
 			}
-			
+
 			$(".resp-tabs-container h2.resp-accordion").each(function(){
-		 
+
 				if(!$(this).hasClass('resp-tab-active')){
 					$(this).find("i.arrow-tabs").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
 				}
 		  });
-	  
-			
+
+
 	  });
 
 
@@ -444,20 +444,20 @@ jQuery(document).ready(function($) {
             }, 2000);
         });
     });
-	
-		
+
+
 	//Change for demo page
     $('input:radio[name=page_builder]').on('change', function() {
-		
+
 		$('input:radio[name=page_builder]').each(function () {
 
 			var $this = $(this);
-	
+
 			if ($(this).prop('checked')) {
 				window.location.replace($this.val());
 			}
 		});
-		
+
         return false;
     });
 
